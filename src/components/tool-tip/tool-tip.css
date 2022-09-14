@@ -1,0 +1,44 @@
+:host {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.icon-wrapper{
+    position: relative;
+}
+ion-icon {
+    font-size: 42px;
+    cursor: pointer;
+}
+#icon-wrapper__checkbox{
+    display: none;
+}
+
+.tooltip-text{
+    transition: all 0.2s ease-out;
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    bottom : -18px;
+    right: 8px;
+    
+    font-size: 13px;
+    color: white;
+    background-color: black;
+
+    min-width: 16ch;
+    max-width: 16ch;
+    padding: 6px;
+
+    border-radius: 3px;
+}
+
+#icon-wrapper__checkbox:checked ~ .tooltip-text{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(50%);
+}
