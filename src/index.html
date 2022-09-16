@@ -14,40 +14,19 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Carbon Globals -->
+    <link rel="stylesheet" href="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/tag/v1/latest/plex.css" />
+    <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v1.21.0/form.min.js"></script>
+    <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v1.21.0/input.min.js"></script>
+    <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v1.21.0/tile.min.js"></script>
+    <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v1.21.0/button.min.js"></script>
+    <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v1.21.0/data-table.min.js"></script>
+    <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v1.21.0/inline-loading.min.js"></script>
 
   </head>
   <body>
-    <wc-tooltip text="stencil says its not a framework.">This is a stencil web component</wc-tooltip>
-    <button id="openSideDrawer">Open Side Drawer</button>
-    <wc-side-drawer heading="side menu">
-      <section>
-        <h2>This Page</h2>
-        <nav role="main">
-          <ul>
-              <li><a href="index.html" class="active">Link</a></li>
-              <li><a href="cars.html">Link</a></li>
-              <li><a href="about.html">Link</a></li>
-          </ul>
-        </nav>
-      </section>
-      <section>
-        <h2>Another Page</h2>
-        <nav role="secondary">
-          <ul>
-              <li><a href="index.html" class="active">Link</a></li>
-              <li><a href="cars.html">Link</a></li>
-          </ul>
-        </nav>
-      </section>
-    </wc-side-drawer>
-
-    <script>
-      let btn = document.querySelector('#openSideDrawer');
-      btn.addEventListener('click',function(){
-        let sideDrawer = document.querySelector('wc-side-drawer');
-        sideDrawer.toggleAttribute('opened');
-      })
-    </script>
+    <stock-finder />
   </body>
 </html>

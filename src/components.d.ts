@@ -6,6 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface StockFinder {
+        "searchWord": string;
+    }
     interface WcSideDrawer {
         "Close": () => Promise<void>;
         "heading": string;
@@ -16,6 +19,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLStockFinderElement extends Components.StockFinder, HTMLStencilElement {
+    }
+    var HTMLStockFinderElement: {
+        prototype: HTMLStockFinderElement;
+        new (): HTMLStockFinderElement;
+    };
     interface HTMLWcSideDrawerElement extends Components.WcSideDrawer, HTMLStencilElement {
     }
     var HTMLWcSideDrawerElement: {
@@ -29,11 +38,15 @@ declare global {
         new (): HTMLWcTooltipElement;
     };
     interface HTMLElementTagNameMap {
+        "stock-finder": HTMLStockFinderElement;
         "wc-side-drawer": HTMLWcSideDrawerElement;
         "wc-tooltip": HTMLWcTooltipElement;
     }
 }
 declare namespace LocalJSX {
+    interface StockFinder {
+        "searchWord"?: string;
+    }
     interface WcSideDrawer {
         "heading"?: string;
         "opened"?: boolean;
@@ -42,6 +55,7 @@ declare namespace LocalJSX {
         "text"?: string;
     }
     interface IntrinsicElements {
+        "stock-finder": StockFinder;
         "wc-side-drawer": WcSideDrawer;
         "wc-tooltip": WcTooltip;
     }
@@ -50,6 +64,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "stock-finder": LocalJSX.StockFinder & JSXBase.HTMLAttributes<HTMLStockFinderElement>;
             "wc-side-drawer": LocalJSX.WcSideDrawer & JSXBase.HTMLAttributes<HTMLWcSideDrawerElement>;
             "wc-tooltip": LocalJSX.WcTooltip & JSXBase.HTMLAttributes<HTMLWcTooltipElement>;
         }

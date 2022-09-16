@@ -1,0 +1,12 @@
+.tile{
+    max-width: 40rem;
+}
+
+bx-btn{
+    margin: 16px 0;
+}
+
+.search-container{
+    display: inline-flex;
+    column-gap: 12px;
+}
